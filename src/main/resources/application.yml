@@ -1,1 +1,14 @@
-jpa
+spring:
+  jpa:
+    database: postgresql
+    hibernate:
+      ddl-auto: create-drop
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+    show-sql: true
+  datasource:
+    url: jdbc:postgresql://localhost:5432/orderapp
+    username: postgres
+    password: taco1234
+  liquibase:
+    enabled: false
