@@ -4,6 +4,7 @@ plugins {
     id 'io.spring.dependency-management' version '1.1.0'
     id 'org.hibernate.orm' version '6.1.7.Final'
     id 'org.graalvm.buildtools.native' version '0.9.18'
+    id 'org.liquibase.gradle' version '2.0.2'
 }
 
 group = 'com.KyoboStudy'
@@ -47,6 +48,17 @@ hibernate {
         lazyInitialization true
         dirtyTracking true
         associationManagement true
+    }
+}
+
+liquibase {
+    activities {
+        main {
+            changeLogFile 'src/main/resources/db/changelog/db.changelog-master.xml'
+            url 'jdbc:postgresql://localhost:5432/orderapp'
+            username 'postgres'
+            password 'taco1234'
+        }
     }
 }
 
