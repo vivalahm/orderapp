@@ -15,7 +15,7 @@ public class Order {
 
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
-  private Long id;
+  private Long OrderId;
 
   private String customerName;
 
@@ -33,11 +33,4 @@ public class Order {
     this.quantity = quantity;
   }
 
-  public void setId(Long id) {
-    this.id = id;
-  }
-
-  public Long getId() {
-    return id;
-  }
 }
