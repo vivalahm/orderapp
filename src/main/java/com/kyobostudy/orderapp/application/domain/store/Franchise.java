@@ -1,5 +1,6 @@
 package com.kyobostudy.orderapp.application.domain.store;
 
+import com.kyobostudy.orderapp.application.domain.common.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -13,7 +14,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Franchise {
+public class Franchise extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long franchiseId;

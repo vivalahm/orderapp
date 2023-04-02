@@ -1,5 +1,6 @@
 package com.kyobostudy.orderapp.application.domain.store;
 
+import com.kyobostudy.orderapp.application.domain.common.BaseEntity;
 import jakarta.persistence.*;
 import lombok.*;
 import org.hibernate.annotations.Comment;
@@ -12,7 +13,7 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Store {
+public class Store extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

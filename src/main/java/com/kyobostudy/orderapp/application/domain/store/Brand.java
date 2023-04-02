@@ -1,5 +1,6 @@
 package com.kyobostudy.orderapp.application.domain.store;
 
+import com.kyobostudy.orderapp.application.domain.common.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -11,7 +12,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Brand {
+public class Brand extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long brandId;

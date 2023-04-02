@@ -1,5 +1,6 @@
 package com.kyobostudy.orderapp.application.domain.store;
 
+import com.kyobostudy.orderapp.application.domain.common.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -14,7 +15,7 @@ import java.time.LocalTime;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class StoreHours {
+public class StoreHours extends BaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
